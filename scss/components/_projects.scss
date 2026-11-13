@@ -1,0 +1,132 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ---------- Mobile (base) ----------
+.projects {
+  padding-bottom: 79px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 39px;
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+
+    &__header {
+      margin-bottom: 64px;
+    }
+
+    &__title {
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: -2px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px 24px;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 140px;
+
+    &__header {
+      margin-bottom: 85px;
+    }
+
+    &__title {
+      font-size: 88px;
+      line-height: 88px;
+      letter-spacing: -2.5px;
+    }
+
+    &__list {
+      gap: 70px 30px;
+    }
+  }
+}
+
+// ---------- Project card ----------
+.card {
+  display: flex;
+  flex-direction: column;
+
+  // mobile/tablet: the media wrapper disappears so the buttons can be placed
+  // below the tags with `order`
+  &__media {
+    display: contents;
+  }
+
+  &__image {
+    order: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 27 / 20;
+    object-fit: cover;
+  }
+
+  &__title {
+    order: 2;
+    margin-top: 18px;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    order: 3;
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+    line-height: 28px;
+    color: $color-light-gray;
+  }
+
+  &__actions {
+    order: 4;
+    display: flex;
+    gap: 30px;
+    margin-top: 24px;
+  }
+
+  // desktop: buttons appear over the image on hover/focus
+  @include desktop {
+    &__media {
+      position: relative;
+      display: block;
+    }
+
+    &__actions {
+      position: absolute;
+      inset: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 0;
+      background-color: rgba($color-black, 0.75);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &__media:hover &__actions,
+    &__media:focus-within &__actions {
+      opacity: 1;
+    }
+  }
+}

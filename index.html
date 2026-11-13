@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Keyes | Front-end developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Adam Keyes, a front-end developer based in the UK."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a class="header__logo" href="#top">adamkeyes</a>
+        <nav aria-label="Social media">
+          <ul class="social">
+            <li>
+              <a href="https://github.com/" aria-label="GitHub"
+                ><img src="imgs/akar-icons_github-fill.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.frontendmentor.io/"
+                aria-label="Frontend Mentor"
+                ><img src="imgs/simple-icons_frontendmentor.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" aria-label="LinkedIn"
+                ><img src="imgs/LinkedIn.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" aria-label="Twitter"
+                ><img src="imgs/akar-icons_twitter-fill.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img
+          class="decor decor--ellipses"
+          src="imgs/Group 26.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero__media">
+          <img
+            class="hero__photo"
+            src="imgs/person.png"
+            alt="Portrait of Adam Keyes"
+          />
+        </div>
+        <img
+          class="decor hero__circle"
+          src="imgs/circulo.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero__content container">
+          <h1 class="hero__title">
+            Nice to<br class="br-tablet" />
+            meet you!<br class="br-not-tablet" />
+            I’m<br class="br-tablet" />
+            <span class="hero__name">Adam Keyes</span>.
+          </h1>
+          <p class="hero__text">
+            Based in the UK, I’m a front-end developer passionate about building
+            accessible web apps that users love.
+          </p>
+          <a class="link" href="#contact">Contact me</a>
+        </div>
+      </section>
+
+      <section class="skills" aria-labelledby="skills-title">
+        <img
+          class="decor decor--ellipses"
+          src="imgs/Group 26.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="skills__inner container">
+          <h2 class="visually-hidden" id="skills-title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skill">
+              <h3 class="skill__name">HTML</h3>
+              <p class="skill__years">4 Years Experience</p>
+            </li>
+            <li class="skill">
+              <h3 class="skill__name">CSS</h3>
+              <p class="skill__years">4 Years Experience</p>
+            </li>
+            <li class="skill">
+              <h3 class="skill__name">Javascript</h3>
+              <p class="skill__years">4 Years Experience</p>
+            </li>
+            <li class="skill">
+              <h3 class="skill__name">Accessibility</h3>
+              <p class="skill__years">4 Years Experience</p>
+            </li>
+            <li class="skill">
+              <h3 class="skill__name">React</h3>
+              <p class="skill__years">3 Years Experience</p>
+            </li>
+            <li class="skill">
+              <h3 class="skill__name">Sass</h3>
+              <p class="skill__years">3 Years Experience</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="projects__header">
+            <h2 class="projects__title" id="projects-title">Projects</h2>
+            <a class="link" href="#contact">Contact me</a>
+          </div>
+          <ul class="projects__list">
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap.jpg"
+                    alt="Design portfolio website preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">Design Portfolio</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap.png"
+                    alt="E-learning landing page preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">E-learning Landing Page</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap%20(1).png"
+                    alt="Todo web app preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">Todo Web App</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap%20(2).png"
+                    alt="Entertainment web app preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">Entertainment Web App</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap%20(3).png"
+                    alt="Memory game preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">Memory Game</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="card">
+                <div class="card__media">
+                  <img
+                    class="card__image"
+                    src="imgs/Bitmap%20(4).png"
+                    alt="Art gallery showcase preview"
+                    width="540"
+                    height="400"
+                  />
+                  <div class="card__actions">
+                    <a class="link" href="#">View Project</a>
+                    <a class="link" href="#">View Code</a>
+                  </div>
+                </div>
+                <h3 class="card__title">Art Gallery Showcase</h3>
+                <ul class="card__tags" aria-label="Technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <img
+          class="decor decor--ellipses"
+          src="imgs/Group 26.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="contact__inner container">
+          <div class="contact__intro">
+            <h2 class="contact__title" id="contact-title">Contact</h2>
+            <p class="contact__text">
+              I would love to hear about your project and how I could help.
+              Please fill in the form, and I’ll get back to you as soon as
+              possible.
+            </p>
+          </div>
+          <form class="contact__form" action="#" method="post">
+            <div class="field">
+              <label class="visually-hidden" for="name">Name</label>
+              <input
+                class="field__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="email">Email</label>
+              <input
+                class="field__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
+              <p class="field__error" role="alert">
+                Sorry, invalid format here
+              </p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="message">Message</label>
+              <textarea
+                class="field__input field__input--message"
+                id="message"
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <button class="link contact__submit" type="submit">
+              Send message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a class="footer__logo" href="#top">adamkeyes</a>
+        <nav aria-label="Social media">
+          <ul class="social">
+            <li>
+              <a href="https://github.com/" aria-label="GitHub"
+                ><img src="imgs/akar-icons_github-fill.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.frontendmentor.io/"
+                aria-label="Frontend Mentor"
+                ><img src="imgs/simple-icons_frontendmentor.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" aria-label="LinkedIn"
+                ><img src="imgs/LinkedIn.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" aria-label="Twitter"
+                ><img src="imgs/akar-icons_twitter-fill.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

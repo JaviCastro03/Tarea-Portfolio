@@ -1,0 +1,95 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ---------- Mobile (base): one column, centered ----------
+.skills {
+  position: relative;
+  padding-top: 81px;
+  padding-bottom: 121px;
+
+  .decor--ellipses {
+    top: 599px;
+    left: 50%;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    border-top: 1px solid $color-white;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 27px;
+    text-align: center;
+  }
+
+  .skill {
+    &__name {
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -1px;
+    }
+
+    &__years {
+      margin-top: 4px;
+      line-height: 24px;
+      color: $color-light-gray;
+    }
+  }
+
+  // ---------- Tablet: two columns ----------
+  @include tablet {
+    padding-top: 59px;
+    padding-bottom: 97px;
+
+    .decor--ellipses {
+      top: 446px;
+      left: calc(50% + 185px);
+    }
+
+    &__inner {
+      padding-top: 51px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 51px;
+      text-align: left;
+    }
+
+    .skill {
+      &__name {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -1.5px;
+      }
+
+      &__years {
+        margin-top: 15px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  // ---------- Desktop: three columns ----------
+  @include desktop {
+    padding-top: 104px;
+    padding-bottom: 136px;
+
+    .decor--ellipses {
+      top: 356px;
+      left: calc(50% + 428px);
+    }
+
+    &__inner {
+      padding-top: 70px;
+    }
+
+    &__list {
+      grid-template-columns: 375px 380px 1fr;
+      row-gap: 57px;
+    }
+  }
+}

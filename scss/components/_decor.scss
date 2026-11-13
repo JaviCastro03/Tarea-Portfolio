@@ -1,0 +1,13 @@
+// Decorative images (ellipses and circle). They never receive clicks
+// and sit behind the content.
+.decor {
+  position: absolute;
+  z-index: 0;
+  max-width: none;
+  pointer-events: none;
+
+  &--ellipses {
+    width: 532px;
+    height: auto;
+  }
+}

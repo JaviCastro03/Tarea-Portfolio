@@ -1,0 +1,33 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-black;
+  overflow-x: clip; // decorative ellipses bleed out of the screen
+  -webkit-font-smoothing: antialiased;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 2px solid $color-green;
+  outline-offset: 4px;
+}

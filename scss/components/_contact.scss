@@ -1,0 +1,168 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// ---------- Mobile (base) ----------
+.contact {
+  position: relative;
+  padding-top: 58px;
+  padding-bottom: 87px;
+  background-color: $color-dark;
+  text-align: center;
+
+  .decor--ellipses {
+    top: 435px;
+    left: -344px;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  &__text {
+    max-width: 440px;
+    margin: 21px auto 0;
+    line-height: 26px;
+    color: $color-light-gray;
+  }
+
+  &__form {
+    margin-top: 17px;
+    text-align: left;
+  }
+
+  &__submit {
+    display: block;
+    margin: 35px 0 0 auto;
+  }
+
+  // ---------- Tablet: form centered under the text ----------
+  @include tablet {
+    padding-top: 56px;
+    padding-bottom: 90px;
+
+    .decor--ellipses {
+      top: 546px;
+      left: -369px;
+    }
+
+    &__title {
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: -2px;
+    }
+
+    &__text {
+      margin-top: 23px;
+      line-height: 28px;
+    }
+
+    &__form {
+      max-width: 445px;
+      margin: 17px auto 0;
+    }
+  }
+
+  // ---------- Desktop: text left, form right ----------
+  @include desktop {
+    padding-top: 51px;
+    padding-bottom: 92px;
+    text-align: left;
+
+    .decor--ellipses {
+      top: 326px;
+      left: -206px;
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 445px;
+      column-gap: 220px;
+      align-items: start;
+    }
+
+    &__intro {
+      padding-top: 28px;
+    }
+
+    &__title {
+      font-size: 88px;
+      line-height: 88px;
+      letter-spacing: -2.5px;
+    }
+
+    &__text {
+      margin: 40px 0 0;
+    }
+
+    &__form {
+      margin: 0;
+    }
+  }
+}
+
+// ---------- Form fields ----------
+.field {
+  position: relative;
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 75px;
+    padding: 38px 24px 17px;
+    border: 0;
+    border-bottom: 1px solid $color-white;
+    border-radius: 0;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $color-white;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: $color-placeholder;
+      opacity: 1;
+    }
+
+    // Text Field Active
+    &:focus {
+      outline: 0;
+      border-bottom-color: $color-green;
+    }
+
+    // Text Field Error (typed something that is not valid)
+    &:not(:placeholder-shown):invalid {
+      border-bottom-color: $color-error;
+      padding-right: 56px;
+      background: url("../imgs/Group%2020.svg") no-repeat right 24px top 38px /
+        20px 20px;
+    }
+  }
+
+  &__input--message {
+    height: 139px;
+    padding-top: 30px;
+    resize: none;
+  }
+
+  &__error {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-error;
+  }
+
+  &__input:not(:placeholder-shown):invalid ~ &__error {
+    display: block;
+  }
+}
